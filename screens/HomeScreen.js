@@ -1,4 +1,4 @@
-import { View, Text, Image, SafeAreaView } from 'react-native';
+import { View, Text, Image, SafeAreaView, TextInput } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { useState, useRef, useLayoutEffect } from 'react';
@@ -7,7 +7,8 @@ import { useState, useRef, useLayoutEffect } from 'react';
 import {
   UserIcon,
   ChevronDownIcon,
-  AdjustmentIcon,
+  AdjustmentsVerticalIcon,
+  MagnifyingGlassIcon
 } from "react-native-heroicons/outline";
 
 export default function HomeScreen() {
@@ -24,12 +25,10 @@ export default function HomeScreen() {
   }, [])
 
   return (
-    // <SafeAreaView className="bg-white pt-2">
-    <SafeAreaView>
+    <SafeAreaView className="bg-white pt-5">
+     {/* <SafeAreaView> */}
       
-      {/* tailwind css working inside react native through className */}
-      <Text className="text-red-500">
-        
+      {/* tailwind css working inside react native through className */}        
         {/* Header */}
         {/* padding on the bottom is 3, items centrally aligned, margin 4 on the x axis, space between x components is 2 */}
         <View className ="flex-row pb-3 items-center mx-4 space-x-2">
@@ -55,9 +54,19 @@ export default function HomeScreen() {
 
           {/*adding user icon*/}
           <UserIcon size={35} color="#00ccbb"/>  
+        </View>      
 
-        </View>       
-      </Text>
+         {/* SEARCH BAR */}
+        <View className="flex-row items-center space-x-2 pb-2 mx-4">
+          <View className="flex-row flex-1 space-x-2 bg-gray-200 p-3">
+            <MagnifyingGlassIcon color="gray" size={20}/>
+            <TextInput
+              placeholder="Restaurants and cuisines"
+              keyboardType="default"
+            />
+          </View>
+          <AdjustmentsVerticalIcon color="#00ccbb"/>    
+        </View>
     </SafeAreaView>
   )
 }
