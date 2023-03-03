@@ -1,4 +1,4 @@
-import { View, Text, Image, SafeAreaView, TextInput } from 'react-native';
+import { View, Text, Image, SafeAreaView, TextInput, ScrollView } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { useState, useRef, useLayoutEffect } from 'react';
@@ -10,6 +10,8 @@ import {
   AdjustmentsVerticalIcon,
   MagnifyingGlassIcon
 } from "react-native-heroicons/outline";
+
+import Categories from '../components/Categories';
 
 export default function HomeScreen() {
   
@@ -67,6 +69,21 @@ export default function HomeScreen() {
           </View>
           <AdjustmentsVerticalIcon color="#00ccbb"/>    
         </View>
+
+
+      {/* APP BODY */}
+      {/* make the app body scrollable */}
+      <ScrollView className='bg-gray-100 flex-1'>
+        
+
+          
+          {/* Component for Categories of Food */}
+          {/* import class Categories */}
+              <Categories/>
+          
+          {/* Featured Rows: Offers Near You, Offered, etc. */}
+      </ScrollView>
+
     </SafeAreaView>
   )
 }
