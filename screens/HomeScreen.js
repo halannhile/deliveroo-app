@@ -49,8 +49,9 @@ export default function HomeScreen() {
           <View className="flex-1">
             {/* text-xs and text-xl means extra-small and extra-large texts */}
             <Text className="font=bold text-gray-400 text-xs">Deliver Now!</Text>
-            <Text className="font-bold text-xl">Current Location
-            <ChevronDownIcon size={20} color="#00ccbb"/>
+            <Text className="font-bold text-xl">
+              Current Location
+              <ChevronDownIcon size={20} color="#00ccbb"/>
             </Text>
           </View>
 
@@ -73,15 +74,13 @@ export default function HomeScreen() {
 
       {/* APP BODY */}
       {/* make the app body scrollable */}
-      <ScrollView className='bg-gray-100 flex-1'>
-        
+      <ScrollView
+        className="bg-gray-100"
+        contentContainerStyle={{ paddingBottom: 100 }}
+      >
+        {/* Categories */}
+        <Categories />
 
-          
-          {/* Component for Categories of Food */}
-          {/* import class Categories */}
-              <Categories/>
-          
-          {/* Featured Rows: Offers Near You, Offered, etc. */}
       </ScrollView>
 
     </SafeAreaView>
