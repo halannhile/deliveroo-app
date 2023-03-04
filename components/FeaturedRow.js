@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     text: {
         marginLeft: 10,
         fontWeight: 'bold',
-        fontSize: "large",
+        fontSize: 16,
     },
 
     icon: {
@@ -30,10 +30,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: 4,
         marginBottom: 10,
         marginLeft: 10,
+        marginTop: 4, 
     },
 
     scrollView: {
         paddingTop: 4,
+        // paddingHorizontal: 4
       },
 
     contentContainer: {
@@ -62,6 +64,58 @@ export default function FeaturedRow({ id, title, description}) {
         {/* Restaurant cards */}
 
         <RestaurantCard
+            id={123}
+            imgUrl="https://links.papareact.com/gn7"
+            title="Yo! Sushi"
+            rating={4.5}
+            genre="Japanese"
+            address="123 Main St"
+            shortDescription="This is a Test description"
+            dishes={[]}
+            long={20}
+            lat={0}
+        />
+
+<       RestaurantCard
+            id={123}
+            imgUrl="https://links.papareact.com/gn7"
+            title="Yo! Sushi"
+            rating={4.5}
+            genre="Japanese"
+            address="123 Main St"
+            shortDescription="This is a Test description"
+            dishes={[]}
+            long={20}
+            lat={0}
+        />
+
+        <RestaurantCard
+            id={123}
+            imgUrl="https://links.papareact.com/gn7"
+            title="Yo! Sushi"
+            rating={4.5}
+            genre="Japanese"
+            address="123 Main St"
+            shortDescription="This is a Test description"
+            dishes={[]}
+            long={20}
+            lat={0}
+        />
+
+        <RestaurantCard
+            id={123}
+            imgUrl="https://links.papareact.com/gn7"
+            title="Yo! Sushi"
+            rating={4.5}
+            genre="Japanese"
+            address="123 Main St"
+            shortDescription="This is a Test description"
+            dishes={[]}
+            long={20}
+            lat={0}
+        />
+
+<RestaurantCard
             id={123}
             imgUrl="https://links.papareact.com/gn7"
             title="Yo! Sushi"
