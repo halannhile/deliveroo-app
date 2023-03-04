@@ -16,11 +16,14 @@ const styles = StyleSheet.create({
         elevation: 2,
         marginRight: 20,
         paddingBottom: 4,
+        borderRadius: 10,
+
       },
 
     image: {
       height: 120,
       width: 200,
+      borderRadius: 10,
     //   borderRadius: 10, // 50 will make it a circular image
     },
 
