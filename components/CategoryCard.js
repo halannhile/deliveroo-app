@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     top: 2,
     bottom: 2,
     left: 1,
-    color: 'gray',
+    color: '#828282',
     // fontWeight: 'bold',
     fontSize: 13,
   },
