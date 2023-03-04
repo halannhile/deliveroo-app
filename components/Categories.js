@@ -5,15 +5,17 @@ import CategoryCard from './CategoryCard'
 export default function Categories() {
   return (
     // Horizontal Scroll View for Category Cards Tab
-        <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{
-        paddingHorizontal: 15,
-        paddingTop: 10,
-      }}
-    >
-      <CategoryCard title="Sea Food" imgUrl="https://links.papareact.com/gn7" />
+      <ScrollView
+        contentContainerStyle={{
+          paddingHorizontal: 15,
+          paddingTop: 10,
+          paddingBottom: 10,
+        }}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      >
+
+<CategoryCard title="Sea Food" imgUrl="https://links.papareact.com/gn7" />
       <CategoryCard
         title="Burger"
         imgUrl="https://assets.bonappetit.com/photos/5b919cb83d923e31d08fed17/1:1/w_2560%2Cc_limit/basically-burger-1.jpg"
@@ -30,6 +32,7 @@ export default function Categories() {
         title="Asian"
         imgUrl="https://static.onecms.io/wp-content/uploads/sites/44/2019/08/26231113/5783153.jpg"
       />
+
     </ScrollView>
   )
 }
