@@ -79,7 +79,7 @@ export default function HomeScreen() {
       {/* make the app body scrollable */}
       <ScrollView
         className="bg-gray-200"
-        contentContainerStyle={{ paddingBottom: 700 }}>
+        contentContainerStyle={{ paddingBottom: 100 }}>
           
         {/* Categories */}
         <Categories />
