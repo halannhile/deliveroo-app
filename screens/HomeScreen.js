@@ -15,17 +15,11 @@ import Categories from '../components/Categories';
 
 import FeaturedRow from '../components/FeaturedRow';
 
-// could do import client from '../sanity' instead
-import sanityClient from '../sanity';
-
 
 export default function HomeScreen() {
   
   // create a navigation hook to give access to the navigation object: 
   const navigation = useNavigation();
-
-  // create a state: initially an empty array
-  const [featuredCategories, setFeaturedCategories] = useState([])
 
   // as soon as the screen appears, do something: 
   useLayoutEffect(() => {
@@ -34,26 +28,6 @@ export default function HomeScreen() {
       headerShown: false,
     })
   }, [])
-
-  // load this effect once when app launches, i.e. only return the featured categories once 
-  useEffect(() => {
-    sanityClient
-    .fetch(
-      `
-      *[_type == "featured"] {
-        ...,
-        restaurants[]->{
-          ...,
-          dishes[]->
-        }
-      }
-      `
-    )
-    .then((data) => {
-      setFeaturedCategories(data);
-    });
-    }, [])
-  
 
   return (
     <SafeAreaView className="bg-white pt-5">
