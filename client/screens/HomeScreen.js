@@ -21,6 +21,9 @@ export default function HomeScreen() {
   // create a navigation hook to give access to the navigation object: 
   const navigation = useNavigation();
 
+  // create a state: initially an empty array
+  const [featuredCategories, setFeaturedCategories] = useState([])
+
   // as soon as the screen appears, do something: 
   useLayoutEffect(() => {
     navigation.setOptions({
