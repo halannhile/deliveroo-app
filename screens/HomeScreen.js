@@ -15,6 +15,9 @@ import Categories from '../components/Categories';
 
 import FeaturedRow from '../components/FeaturedRow';
 
+// could do import client from '../sanity' instead
+import sanityClient from '../sanity';
+
 
 export default function HomeScreen() {
   
@@ -31,6 +34,26 @@ export default function HomeScreen() {
       headerShown: false,
     })
   }, [])
+
+  // load this effect once when app launches, i.e. only return the featured categories once 
+  useEffect(() => {
+    sanityClient
+    .fetch(
+      `
+      *[_type == "featured"] {
+        ...,
+        restaurants[]->{
+          ...,
+          dishes[]->
+        }
+      }
+      `
+    )
+    .then((data) => {
+      setFeaturedCategories(data);
+    });
+    }, [])
+  
 
   return (
     <SafeAreaView className="bg-white pt-5">
